@@ -1,16 +1,21 @@
 #include <stdio.h>
-
 /**
- * main - prints out the alphabet in lowercase
+ * main - Entry Point
  * Return: 0
  */
 int main(void)
 {
-int alphabet = 97;
-while (alphabet < 123)
+int lower = 97;
+int upper = 65;
+while (lower < 123)
 {
-putchar(alphabet);
-alphabet++;
+putchar(lower);
+lower++;
+}
+while (upper < 93)
+{
+putchar(upper);
+upper++;
 }
 putchar('\n');
 return (0);

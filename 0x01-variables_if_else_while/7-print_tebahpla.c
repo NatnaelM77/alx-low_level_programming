@@ -10,8 +10,8 @@ int main(void)
 
 	while (alphabet <= 65)
 	{
-		putchar(a);
-		a--;
+		putchar(alphabet);
+		alphabet--;
 	}
 
 	putchar('\n');

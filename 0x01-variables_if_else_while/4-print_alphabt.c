@@ -5,18 +5,11 @@
  */
 int main(void)
 {
-int lower = 97;
-int upper = 65;
-while (lower < 123)
-{
-putchar(lower);
-lower++;
-}
-while (upper < 93)
-{
-putchar(upper);
-upper++;
-}
-putchar('\n');
-return (0);
+	int lower = 97;
+
+	for (lower; lower < 123; lower++)
+		if (lower != 101 && lower != 113)
+			putchar(lower);
+	putchar('\n');
+	return (0);
 }
