@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int alphabet = 123;
+	int alphabet = 122;
 
 	while (alphabet >= 97)
 	{
