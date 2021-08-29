@@ -8,7 +8,7 @@ int main(void)
 {
 	int alphabet = 123;
 
-	while (alphabet <= 65)
+	while (alphabet >= 65)
 	{
 		putchar(alphabet);
 		alphabet--;

@@ -12,7 +12,7 @@ while (lower < 123)
 putchar(lower);
 lower++;
 }
-while (upper < 93)
+while (upper < 91)
 {
 putchar(upper);
 upper++;

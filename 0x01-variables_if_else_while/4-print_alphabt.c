@@ -5,9 +5,9 @@
  */
 int main(void)
 {
-	int lower = 97;
+	int lower;
 
-	for (lower; lower < 123; lower++)
+	for (lower = 97; lower < 123; lower++)
 		if (lower != 101 && lower != 113)
 			putchar(lower);
 	putchar('\n');
