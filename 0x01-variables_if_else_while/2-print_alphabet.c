@@ -6,9 +6,14 @@
  */
 int main(void)
 {
-	int alphabet;
-	for (alphabet = 97; alphabet < 123; alphabet++)
+	int alphabet = 97;
+
+	while (alphabet < 123)
+	{
 		putchar(alphabet);
+		alphabet++;
+	}
+
 	putchar('\n');
 	return (0);
 }
