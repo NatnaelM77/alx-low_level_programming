@@ -1,17 +1,21 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - prints out all the numbers of base 16 in lowercase
- * Return: 0
+ * jack_bauer - prints a 24 hour timer in military
  */
-int main(void)
+void jack_bauer(void)
 {
-	int i;
+	int i, j;
 
-	for (i = 48; i < 58; i++)
-		putchar(i);
-	for (i = 'a'; i <= 'f'; i++)
-		putchar(i);
-	putchar('\n');
-	return (0);
+	for (i = 0; i < 24; i++)
+	{
+		for (j = 0; j < 60; j++)
+		{
+			_putchar(i / 10 + 48);
+			_putchar(i % 10 + 48);
+			_putchar(':');
+			_putchar(j / 10 + 48);
+			_putchar(j % 10 + 48);
+			_putchar('\n');
+		}
+	}
 }
