@@ -7,12 +7,14 @@
 void puts2(char *str)
 {
 	int len = strlen(str);
+	int i = 0;
 
-	for (int i = 0; i < len; i++)
+	while (i < len)
 	{
 		if (i % 2 == 0)
 		{
 			printf("%c", *(str + i));
 		}
+		i++;
 	}
 }
