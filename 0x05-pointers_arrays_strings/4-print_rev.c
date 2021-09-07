@@ -6,9 +6,9 @@
 */
 void print_rev(char *s)
 {
-	int len = strlen(s);
+	int i = strlen(s);
 
-	for (int i = len; i >= 0; i--)
+	while (i--)
 	{
 		printf("%c", *(s + i));
 	}
