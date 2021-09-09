@@ -1,5 +1,25 @@
 #include <stdio.h>
-#include <string.h>
+#include "main.h"
+
+/**
+ *_strlen - returns the length of a string
+ *@str:a string of length to be returned
+ *Return: returns the length of a string
+ */
+int _strlen(char *str)
+{
+	int length = 0;
+
+	while (*str)
+	{
+		str++;
+		length++;
+	}
+
+	return (length);
+
+}
+
 
 /**
  *_strcat - concatinates two strings
@@ -10,7 +30,7 @@
 char *_strcat(char *dest, char *src)
 {
 	char *cat = dest + _strlen(dest);
-	int length =  strlen(dest) + strlen(src);
+	int length =  _strlen(dest) + _strlen(src);
 
 	while (*src)
 	{
