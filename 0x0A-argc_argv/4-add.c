@@ -4,29 +4,27 @@
 /**
 * main - add a positive integers
 * @argc: the size of argv
-* @argv: array containing command line arguments
+* @argv: array containing command line argument
 * Return: 0
 */
 
 int main(int argc, char const *argv[])
 {
-	int i, total = 0;
+	int i, res;
 
-	if (argc > 1)
+	res = 0;
+
+	for (i = 0; i < argc; i++)
 	{
-		for (i = 1; i < argc; ++i)
+		if (i > 0)
 		{
 			if (atoi(argv[i]) == 0)
 			{
 				return (printf("Error\n"), 1);
 			}
-			total += atoi(argv[i]);
+			res += atoi(argv[i]);
 		}
-		printf("%d\n", total);
 	}
-	else
-	{
-		printf("%d\n", 0);
-	}
+	printf("%d\n", res);
 	return (0);
 }
