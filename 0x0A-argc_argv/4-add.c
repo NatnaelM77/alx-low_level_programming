@@ -8,7 +8,7 @@
  * @argv: argument vector
  * Return: 0 if no errors, 1 if invalid argument
  */
-int main(int argc, char *argv[])
+int main(int argc, char const *argv[])
 {
 	int i, j, res = 0;
 
