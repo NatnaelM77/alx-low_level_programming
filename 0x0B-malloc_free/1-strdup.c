@@ -32,7 +32,7 @@ char *_strdup(char *str)
 	if (!str)
 		return (NULL);
 	copy = malloc((_strlen(str) + 1) * sizeof(char));
-	
+	/*incase there is insufficent memory*/
 	if (!copy)
 		return (NULL);
 	_copy = copy;
