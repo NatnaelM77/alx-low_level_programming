@@ -2,16 +2,17 @@
 #include "function_pointers.h"
 
 /**
- * array_iterator - searches for an integer
+ * int_index - searches for an integer
  * @array: array
  * @size: size of an array
- * @action: callback function to check array elem
+ * @cmp: callback function to check array elem
+ * Return: first index for which cmp doesn't return 0, or -1
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i, r;
-	
+
 	if (size > 0 && array && cmp)
 	{
 		for (i = 0; i < size; i++)
