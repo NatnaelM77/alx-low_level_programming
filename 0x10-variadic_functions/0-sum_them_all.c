@@ -1,5 +1,11 @@
 #include "variadic_functions.h"
 
+/**
+ * sum_them_all - returns the sum of all its parameters.
+ * @n: size fo number
+ * Return: sum
+ */
+
 int sum_them_all(const unsigned int n, ...)
 {
     unsigned int i;
@@ -16,5 +22,5 @@ int sum_them_all(const unsigned int n, ...)
 
     va_end(num);
 
-    return sum;
+    return (sum);
 }
