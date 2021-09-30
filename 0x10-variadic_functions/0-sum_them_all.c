@@ -2,7 +2,7 @@
 
 /**
  * sum_them_all - returns the sum of all its parameters.
- * @n: size fo number
+ * @n: size of number
  * Return: sum all parameters
  */
 
