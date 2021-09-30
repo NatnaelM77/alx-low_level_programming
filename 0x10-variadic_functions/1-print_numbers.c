@@ -23,9 +23,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		va_end(valist);
 	}
 	printf("\n");
-<<<<<<< HEAD
 	va_end(valist);
 }
-=======
-}
->>>>>>> 2dd681a9433c962fdb320f2a6c1536171798ebb9
