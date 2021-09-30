@@ -8,18 +8,19 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
-	int num;
 	va_list valist;
+	unsigned int i;
 
-	va_start(valist, n);
-	for (i = 0; i < n; i++)
+	if (n > 0)
 	{
-		num = va_arg(valist, int);
-		printf("%d", num);
-		if (i < n - 1 && separator)
-			printf("%s", separator);
+		va_start(valist, n);
+		for (i = 1; i <= n; i++)
+		{
+			printf("%d", va_arg(valist, int));
+			if (i != n && separator != NULL)
+				printf("%s", separator);
+		}
+		va_end(valist);
 	}
 	printf("\n");
-	va_end(valist);
 }
