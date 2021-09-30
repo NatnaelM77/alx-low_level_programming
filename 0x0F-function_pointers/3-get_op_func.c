@@ -6,6 +6,7 @@
  *
  * Return: pointer to the correct function
  */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -16,6 +17,7 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+
 	int i;
 
 	i = 0;
