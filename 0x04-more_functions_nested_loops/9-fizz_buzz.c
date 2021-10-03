@@ -19,6 +19,7 @@ void fizz_buzz(void)
 		else
 			printf("%d ", i);
 	}
+	printf("\n");
 
 }
 
@@ -30,6 +31,6 @@ void fizz_buzz(void)
 int main(void)
 {
 
-	fizz_buzz(void);
+	fizz_buzz();
 	return (0);
 }
