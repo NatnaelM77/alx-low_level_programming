@@ -1,11 +1,14 @@
 #include "main.h"
 
 /**
- * fizz_buzz - prints the numbers from 1 to 100
+ * main - prints from 1 to 100
+ *
+ * Return: Always 0.
  */
 
-void fizz_buzz(void)
+int main(void)
 {
+
 	int i;
 
 	for (i = 1; i <= 100; ++i)
@@ -21,16 +24,5 @@ void fizz_buzz(void)
 	}
 	printf("\n");
 
-}
-
-/**
- * main - Entry Point
- * Return: 0
- */
-
-int main(void)
-{
-
-	fizz_buzz();
 	return (0);
 }
