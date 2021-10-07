@@ -8,7 +8,7 @@
 
 size_t list_len(const list_t *h)
 {
-	int count;
+	size_t count;
 	const list_t *p = h;
 
 	count = 0;
