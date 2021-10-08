@@ -1,10 +1,21 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
+
 /**
- * rev_string - reverse a string
- * @s: address of a variable
-*/
+ * rev_string - reverses a string
+ * @s: string s
+ */
 void rev_string(char *s)
 {
-	strrev(s);
+	int len = _strlen(s);
+	int i = 0;
+	char tmp;
+
+	while (i < len / 2)
+	{
+		tmp = *(s + i);
+		*(s + i) = *(s + len - 1 - i);
+		*(s + len - 1 - i) = tmp;
+		i++;
+	}
+
 }

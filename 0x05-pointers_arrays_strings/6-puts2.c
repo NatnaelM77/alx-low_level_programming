@@ -1,9 +1,10 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
+
 /**
  * puts2 - print other character
  * @str: string param
 */
+
 void puts2(char *str)
 {
 	int len = strlen(str);
@@ -17,4 +18,5 @@ void puts2(char *str)
 		}
 		i++;
 	}
+	_putchar('\n');
 }
