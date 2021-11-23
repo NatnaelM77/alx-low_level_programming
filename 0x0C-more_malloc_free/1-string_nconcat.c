@@ -16,7 +16,7 @@ size_t _strlen(char *s)
 
 	return (length);
 }
-	
+
 /**
  * string_nconcat - concatenates two strings
  * @s1: string
