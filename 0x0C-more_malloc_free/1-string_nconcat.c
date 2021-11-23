@@ -26,40 +26,33 @@ size_t _strlen(char *s)
  * Return: a pointer to the allocated memory
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n);
 {
+	size_t i, j = 0;
 	char *ptr;
-	size_t i, j = 0, len;
 
 	if (!s1)
-		s1 = "";
+		dest = "";
+
 	if (!s2)
-		s2 = "";
+		src = "";
 
-	if (n >= _strlen(s2))
-	{
-		len = _strlen(s2);
-
-		if (len == 0)
-			len = _strlen(s2) + n + 1;
-	}
-
-	else
-		len = _strlen(s1) + n + 1;
-
-	ptr = (char *) malloc(len);
-
+	ptr = malloc(strlen(dest) + n + 1);
 	if (!ptr)
 		return (NULL);
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i < strlen(s1); i++)
+		*(ptr + i) = *(s1 + i);
+
+	j = i;
+
+	for (i = 0; i < n; i++)
 	{
-		if (i < _strlen(s1))
-			ptr[i] = s1[i];
-		else
-			ptr[i] = s2[j++];
+		*(ptr + j) = *(s2 + i);
+		j++;
 	}
-	ptr[i] = '\0';
+
+	*(ptr + j) = '\0';
 
 	return (ptr);
 }
