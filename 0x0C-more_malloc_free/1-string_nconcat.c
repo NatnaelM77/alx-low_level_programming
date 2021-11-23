@@ -16,7 +16,7 @@ size_t _strlen(char *s)
 
 	return (length);
 }
-
+	
 /**
  * string_nconcat - concatenates two strings
  * @s1: string
@@ -26,18 +26,18 @@ size_t _strlen(char *s)
  * Return: a pointer to the allocated memory
  */
 
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	size_t i, j = 0;
 	char *ptr;
 
 	if (!s1)
-		dest = "";
+		s1 = "";
 
 	if (!s2)
-		src = "";
+		s2 = "";
 
-	ptr = malloc(_strlen(dest) + n + 1);
+	ptr = malloc(_strlen(s1) + n + 1);
 	if (!ptr)
 		return (NULL);
 
