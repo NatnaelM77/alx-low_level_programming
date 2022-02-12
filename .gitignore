@@ -1,3 +1,6 @@
 
 .vscode/c_cpp_properties.json
 .replit
+cmake-build-debug/CMakeFiles/clion-log.txt
+.idea/vcs.xml
+.idea/workspace.xml
