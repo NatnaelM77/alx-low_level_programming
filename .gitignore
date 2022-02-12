@@ -4,3 +4,9 @@
 cmake-build-debug/CMakeFiles/clion-log.txt
 .idea/vcs.xml
 .idea/workspace.xml
+*.iml
+*.xml
+*.exe
+*.stackdump
+*.stackdump
+0x17-doubly_linked_lists/main.c
