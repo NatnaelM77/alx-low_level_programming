@@ -23,13 +23,20 @@ int main(void)
 				printf("0%d, ", j);
 			}
 
-			if (i == 98)
+			if (i > 9)
 			{
-				printf("%d %d\n", i, j);
+				printf("%d ", i);
 			}
-			else if (i > 9 && j > 9)
+			if (j > 9)
 			{
-				printf("%d %d, ", i, j);
+				if (i == 98)
+				{
+					printf("%d %d\n", i, j);
+				}
+				else
+				{
+					printf("%d, ", j);
+				}
 			}
 		}
 	}
