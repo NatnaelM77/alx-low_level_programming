@@ -14,7 +14,7 @@ int main(void)
 	{
 		for (j = i + 1; j < 100; j++)
 		{
-			if (i < 9)
+			if (i <= 9)
 			{
 				printf("0%d ", i);
 				if (j > 9)
