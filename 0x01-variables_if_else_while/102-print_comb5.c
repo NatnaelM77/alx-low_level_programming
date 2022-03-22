@@ -20,7 +20,7 @@ int main(void)
 			}
 			if (j < 9)
 			{
-				printf("0%d,", j);
+				printf("0%d, ", j);
 			}
 
 			if (i == 98)

@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints out all the numbers between 00 and 99
- * with no two digits being the same
+ * main - prints all possible different combinations of three digits.
+ *
  * Return: 0
  */
 
@@ -22,7 +22,7 @@ int main(void)
 				}
 				else
 				{
-					printf("%d%d%d,", i, j, k);
+					printf("%d%d%d, ", i, j, k);
 				}
 			}
 		}
