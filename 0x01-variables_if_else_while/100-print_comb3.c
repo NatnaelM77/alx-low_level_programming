@@ -1,36 +1,30 @@
 #include <stdio.h>
+
 /**
  * main - prints out all the numbers between 00 and 99
  * with no two digits being the same
  * Return: 0
  */
+
 int main(void)
 {
-	int i, j;
+	int i, j, k;
 
-	for (i = 48; i < 58; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = i; j < 58; j++)
+		for (j = i + 1; j < 10; j++)
 		{
-			if (i == j)
+			for (k = j + 1; k < 10; k++)
 			{
-				continue;
-			}
-
-			putchar(i);
-			putchar(j);
-
-			if (i == 56 && j == 57)
-			{
-				break;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
+				if (i == 7)
+				{
+					printf("%d%d%d", i, j, k);
+				}
+				else
+				{
+					printf("%d%d%d,", i, j, k);
+				}
 			}
 		}
 	}
-	putchar('\n');
-	return (0);
 }
