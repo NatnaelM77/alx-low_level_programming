@@ -25,7 +25,7 @@ int main(void)
 
 			if (i == 98)
 			{
-				printf("%d %d", i, j);
+				printf("%d %d\n", i, j);
 			}
 			else if (i > 9 && j > 9)
 			{
@@ -33,4 +33,6 @@ int main(void)
 			}
 		}
 	}
+
+	return (0);
 }

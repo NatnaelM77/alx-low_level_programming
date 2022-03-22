@@ -18,7 +18,7 @@ int main(void)
 			{
 				if (i == 7)
 				{
-					printf("%d%d%d", i, j, k);
+					printf("%d%d%d\n", i, j, k);
 				}
 				else
 				{
@@ -27,4 +27,6 @@ int main(void)
 			}
 		}
 	}
+
+	return (0);
 }
