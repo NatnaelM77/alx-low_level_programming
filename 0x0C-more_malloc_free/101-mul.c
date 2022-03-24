@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int index = 1, result = 1;
+	long long int index = 1, result = 1;
 
 	if (argc != 3)
 	{
