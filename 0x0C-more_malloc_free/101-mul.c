@@ -10,7 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-	long long int index = 1, result = 1;
+	int index = 1;
+	unsigned long int result = 1;
 
 	if (argc != 3)
 	{
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
 		index++;
 	}
 
-	printf("%d\n", result);
+	printf("%uld\n", result);
 
 	return (0);
 }
