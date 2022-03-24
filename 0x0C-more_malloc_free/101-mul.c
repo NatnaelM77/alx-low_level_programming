@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		index++;
 	}
 
-	printf("%uld\n", result);
+	printf("%lu\n", result);
 
 	return (0);
 }
