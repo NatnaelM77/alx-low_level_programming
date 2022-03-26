@@ -8,6 +8,7 @@
 int _strlen(char *str)
 {
 	int length = 0;
+
 	while (*str)
 	{
 		str++;
@@ -27,6 +28,7 @@ char *_strncat(char *dest, char *src, int n)
 {
 	char *cat = dest + _strlen(dest);
 	int length;
+
 	if (n > _strlen(src) + _strlen(dest))
 		length =  _strlen(dest) + _strlen(src);
 	else
