@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include main.h"
+#include "main.h"
+
 /**
  *_strlen - returns the length of a string
  *@str:a string of length to be returned
@@ -15,6 +15,7 @@ int _strlen(char *str)
 	}
 	return (length);
 }
+
 /**
  *_strncat - concatinates two strings
  *@dest:destination pointer
