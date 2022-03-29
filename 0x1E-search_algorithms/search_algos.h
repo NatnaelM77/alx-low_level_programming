@@ -17,9 +17,9 @@
  */
 typedef struct listint_s
 {
-        int n;
-        size_t index;
-        struct listint_s *next;
+	int n;
+	size_t index;
+	struct listint_s *next;
 } listint_t;
 
 /**
@@ -34,10 +34,10 @@ typedef struct listint_s
  */
 typedef struct skiplist_s
 {
-        int n;
-        size_t index;
-        struct skiplist_s *next;
-        struct skiplist_s *express;
+	int n;
+	size_t index;
+	struct skiplist_s *next;
+	struct skiplist_s *express;
 } skiplist_t;
 
 /* Print Array */
@@ -47,7 +47,7 @@ void print_array(int, int);
 int linear_search(int *, size_t, int);
 
 /* Binary Search Algorithm */
-int binary_search(int *, size_t, int);	
+int binary_search(int *, size_t, int);
 
 /* Jump Search Algorithm */
 int jump_search(int *, size_t, int);
@@ -65,6 +65,6 @@ int advanced_binary(int *, size_t, int);
 listint_t *jump_list(listint_t *, size_t, int);
 
 /* Linear Skip */
-skiplist_t *linear_skip(skiplist_t *, int );
+skiplist_t *linear_skip(skiplist_t *, int);
 
 #endif /* SERACH_ALGOS */
