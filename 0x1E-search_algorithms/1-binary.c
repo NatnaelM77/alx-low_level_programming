@@ -19,7 +19,6 @@ int binary_search(int *array, size_t size, int value)
 
 	if (!array)
 		return (-1);
-	
 
 	while (low <= high)
 	{
@@ -39,10 +38,10 @@ int binary_search(int *array, size_t size, int value)
 
 /**
  * print_array - print array from min to max
- * 
+ *
  * @min: min element of array 
  * @max: max element of array
- * 
+ *
  */
 
 void print_array(int min, int max)
