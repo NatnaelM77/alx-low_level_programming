@@ -32,6 +32,7 @@ void print_times_table(int n)
  * print_table - print formated table
  *
  * @value: value to be printed
+ * @iter: iteration
  * @status: status value for newline
  */
 
