@@ -47,15 +47,9 @@ int binary_search(int *array, size_t size, int value)
 void print_array(int min, int max)
 {
 	printf("Searching in array: ");
-	for (; min <= max; min++)
+	for (; min < max; min++)
 	{
-		if (min == max)
-		{
-			printf("%d\n", min);
-		}
-		else
-		{
-			printf("%d, ", min);
-		}
+		printf("%d, ", min);
 	}
+	printf("%d\n", min);
 }
