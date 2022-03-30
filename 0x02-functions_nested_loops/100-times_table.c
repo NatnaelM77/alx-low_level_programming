@@ -20,9 +20,9 @@ void print_times_table(int n)
 			for (; j < n; j++)
 			{
 				result = i * j;
-				print_table(result, j, 0);
+				print_table(result, j, n, 0);
 			}
-			print_table(i * j, j, 1);
+			print_table(i * j, j, n, 1);
 			j = 0;
 		}
 	}
@@ -33,16 +33,20 @@ void print_times_table(int n)
  *
  * @value: value to be printed
  * @iter: iteration
+ * @size: size of table
  * @status: status value for newline
  */
 
-void print_table(int value, int iter, int status)
+void print_table(int value, int iter, int size, int status)
 {
-	char * space = "   ";
+	char *space = "   ";
 
 	if (iter == 0)
 	{
-		printf("%d,", value);
+		if (iter == size)
+			printf("%d\n", value);
+		else
+			printf("%d,", value);
 	}
 	else
 	{

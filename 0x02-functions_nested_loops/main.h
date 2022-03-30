@@ -16,6 +16,6 @@ int add(int a, int b);
 void print_to_98(int n);
 void times_table(void);
 void print_times_table(int n);
-void print_table(int value, int iter, int status);
+void print_table(int value, int iter, int size, int status);
 
 #endif /* MAIN_H */
