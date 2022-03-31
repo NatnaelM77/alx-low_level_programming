@@ -8,21 +8,45 @@
 
 int main(void)
 {
-	int i = 0;
-	unsigned long int a = 0, b = 1, next = 0;
+	int count;
+	unsigned long i, j, k;
+	unsigned long m, n, p, carry;
 
-	while (i < 98)
+	count = 0;
+	i = 0;
+	j = 1;
+
+	for (count = 1; count <= 91; count++)
 	{
-		next = a + b;
-		a = b;
-		b = next;
-		printf("%lu", next);
-
-		if (i < 97)
-			printf(", ");
-		i++;
+		k = i + j;
+		i = j;
+		j = k;
+		printf("%lu, ", k);
 	}
-	printf("\n");
 
+	m = i % 1000;
+	i = i / 1000;
+	n = j % 1000;
+	j = j / 1000;
+
+	while (count <= 98)
+	{
+		carry = (m + n) / 1000;
+		p = (m + n) - carry * 1000;
+		k = (i + j) + carry;
+		m = n;
+		n = p;
+		i = j;
+		j = k;
+		if (p >= 100)
+			printf("%lu%lu", k, p);
+		else
+			printf("%lu0%lu", k, p);
+		if (count != 98)
+			printf(", ");
+		count++;
+	}
+	putchar('\n');
+	
 	return (0);
 }
