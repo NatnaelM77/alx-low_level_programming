@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_skip - searches for a value in an array using 
+ * linear_skip - searches for a value in an array using
  * advanced_binary search algorithm
  *
  * @list: is a pointer to the first element of the array

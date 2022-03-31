@@ -41,7 +41,7 @@ typedef struct skiplist_s
 } skiplist_t;
 
 /* Print Array */
-void print_array(int, int);
+void print_array(int *, int, int);
 
 /* Linear Search Algorithm */
 int linear_search(int *, size_t, int);

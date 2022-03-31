@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * jump_list - searches for a value in an array using 
+ * jump_list - searches for a value in an array using
  * advanced_binary search algorithm
  *
  * @list: is a pointer to the first element of the array
