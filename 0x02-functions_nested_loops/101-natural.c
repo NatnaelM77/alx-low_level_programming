@@ -23,7 +23,7 @@ void print_multiples(int n)
 
 /**
  * main - Entry Point
- * 
+ *
  * Return: 0 on success
  */
 
