@@ -30,10 +30,7 @@ char *_strpbrk(char *s, char *accept)
 
 				return (str);
 			}
-			else
-			{
-				return (NULL);
-			}
 		}
 	}
+	return (NULL);
 }
