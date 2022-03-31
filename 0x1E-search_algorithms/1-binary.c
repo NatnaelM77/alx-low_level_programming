@@ -39,6 +39,7 @@ int binary_search(int *array, size_t size, int value)
 /**
  * print_array - print array from min to max
  *
+ * @array: array of int
  * @min: min element of array
  * @max: max element of array
  *
