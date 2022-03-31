@@ -18,7 +18,7 @@ void print_multiples(int n)
 			total += i;
 		}
 	}
-	printf("%d ", total);
+	printf("%d\n", total);
 }
 
 /**
