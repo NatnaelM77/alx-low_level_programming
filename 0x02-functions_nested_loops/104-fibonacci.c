@@ -1,11 +1,8 @@
 #include "main.h"
-
 /**
  * main - prints the first 98 Fibonacci numbers, starting with 1 and 2
- *
  * Return: 0 on success
  */
-
 int main(void)
 {
 	int count;
@@ -15,7 +12,6 @@ int main(void)
 	count = 0;
 	i = 0;
 	j = 1;
-
 	for (count = 1; count <= 91; count++)
 	{
 		k = i + j;
@@ -23,12 +19,10 @@ int main(void)
 		j = k;
 		printf("%lu, ", k);
 	}
-
 	m = i % 1000;
 	i = i / 1000;
 	n = j % 1000;
 	j = j / 1000;
-
 	while (count <= 98)
 	{
 		carry = (m + n) / 1000;
@@ -47,6 +41,5 @@ int main(void)
 		count++;
 	}
 	putchar('\n');
-	
 	return (0);
 }
