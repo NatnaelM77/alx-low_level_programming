@@ -45,7 +45,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	else
 	{
-		size_t i;
 		void *new = malloc(new_size);
 		
 		if (!new)
