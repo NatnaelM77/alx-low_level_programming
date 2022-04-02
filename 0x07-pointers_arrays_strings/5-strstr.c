@@ -11,23 +11,44 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	size_t i, j;
+	char *start = haystack;
+	char *_needle = needle;
+	int found =  0;
 
-	for (i = 0; i < strlen(haystack); i++)
+	if (!*_needle)
+		return (haystack);
+
+	while (*haystack)
 	{
-		if (haystack[i] == needle[0])
+		if (*haystack == *needle)
 		{
-			size_t len = (strlen(haystack) - i) + 1;
-			char *str = malloc(len);
-
-			for (j = 0; j < len; j++)
+			found = 1;
+			start = haystack;
+			while (*_needle)
 			{
-				*(str + j) = *(haystack + i++);
-			}
-			*(str + j) = '\0';
+				if (*haystack != *_needle)
+				{
+					found = 0;
+					_needle = needle;
+					break;
+				}
 
-			return (str);
+				haystack++;
+				_needle++;
+			}
 		}
+
+		if (found)
+		{
+			break;
+		}
+
+		haystack++;
 	}
+	if (found)
+	{
+		return (start);
+	}
+
 	return (NULL);
 }
