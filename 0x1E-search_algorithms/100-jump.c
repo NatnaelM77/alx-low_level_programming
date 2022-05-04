@@ -15,33 +15,34 @@ int jump_search(int *array, size_t size, int value)
 {
 	int jump = sqrt(size);
 	int min = 0;
-	int max = 0;
+	int max = jump;
+	int i;
 
 	if (!array || size == 0)
 	{
 		return (-1);
 	}
 
-	while (array[min] <= value && max < value)
+	while (array[max] <= value && max < size)
 	{
-		if (array[min] == value)
+		if (array[max] == value)
 			break;
-
-		printf("Value checked array[%d] = [%d]\n", min, array[min]);
 
 		min = max;
 		max += jump;
 
 		if (max > size - 1)
-		{
-			printf("Value checked array[%d] = [%d]\n", min, array[min]);
 			break;
-		}
+	}
+
+	for (i = 0; i <= min; i += 3)
+	{
+		printf("Value checked array[%d] = [%d]\n", i, array[i]);
 	}
 
 	printf("Value found between indexes [%d] and [%d]\n", min, max);
 
-	while (min < max && min < size)
+	while (min <= max && min < size)
 	{
 		printf("Value checked array[%d] = [%d]\n", min, array[min]);
 
