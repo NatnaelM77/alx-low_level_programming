@@ -1,10 +1,10 @@
 #include "search_algos.h"
 
 /**
- * jump_search - searches for a value in an array using
- * jump search algorithm
+ * jump_list - searches for a value in an array using
+ * advanced_binary search algorithm
  *
- * @array: is a pointer to the first element of the array
+ * @list: is a pointer to the first element of the array
  * @size: is the number of elements in array
  * @value: is the value to search for
  *
@@ -13,33 +13,36 @@
 
 int jump_search(int *array, size_t size, int value)
 {
+	int jump = sqrt(size);
 	int min = 0;
-	int block_size = (int) sqrt(size);
-	int max = block_size;
-
-	if (!array)
-		return (-1);
-
-	while (*(array + max) > value || max < size)
+	int max = 0;
+	
+	while (array[min] <= value && max < value)
 	{
-		printf("Value checked array[%d] = [%d]\n", min, min);
-		if (*(array + max) < value)
+		if (array[min] == value)
+			break;
+
+		printf("Value checked array[%d] = [%d]\n", min, array[min]);
+
+		min = max;
+		max += jump;
+
+		if (max > size - 1)
 		{
-			min = max;
-			max = max + block_size;
-		} else
-		{
+			printf("Value checked array[%d] = [%d]\n", min, array[min]);
 			break;
 		}
 	}
 
-	printf("Value found between indexes[%d] = [%d]\n", min, max);
-	for (; min <= max; min++)
+	printf("Value found between indexes [%d] and [%d]\n", min, max);
+	
+	while (min < max && min < size)
 	{
-		printf("Value checked array[%d] = [%d]\n", min, *(array +
-								  min));
-		if (value == *(array + min))
+		printf("Value checked array[%d] = [%d]\n", min, array[min]);
+		
+		if (value == array[min])
 			return (min);
+		min += 1;
 	}
 
 	return (-1);
