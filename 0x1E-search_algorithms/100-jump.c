@@ -1,10 +1,10 @@
 #include "search_algos.h"
 
 /**
- * jump_list - searches for a value in an array using
- * advanced_binary search algorithm
+ * jump_search - searches for a value in a sorted array
+ * of integers using the Jump search algorithm.
  *
- * @list: is a pointer to the first element of the array
+ * @array: is a pointer to the first element of the array
  * @size: is the number of elements in array
  * @value: is the value to search for
  *
@@ -16,7 +16,7 @@ int jump_search(int *array, size_t size, int value)
 	int jump = sqrt(size);
 	int min = 0;
 	int max = 0;
-	
+
 	if (!array || size == 0)
 	{
 		return (-1);
@@ -40,11 +40,11 @@ int jump_search(int *array, size_t size, int value)
 	}
 
 	printf("Value found between indexes [%d] and [%d]\n", min, max);
-	
+
 	while (min < max && min < size)
 	{
 		printf("Value checked array[%d] = [%d]\n", min, array[min]);
-		
+
 		if (value == array[min])
 			return (min);
 		min += 1;
