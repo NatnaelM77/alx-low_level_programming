@@ -22,12 +22,12 @@ int exponential_search(int *array, size_t size, int value)
 	if (array[0] == value)
 		return (0);
 
-	while (array[step] <= value && step < size)
+	while (array[step] <= value && step < (int) size)
 	{
 		printf("Value checked array[%d] = [%d]\n", step, array[step]);
 		min = step;
 		step *= 2;
-		if (step > size - 1)
+		if (step > (int) size - 1)
 		{
 			step -= 1;
 			break;
