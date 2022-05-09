@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * exponential_search - searches for a value in an array using 
+ * exponential_search - searches for a value in an array using
  * exponential search algorithm
  *
  * @array: is a pointer to the first element of the array
@@ -33,9 +33,7 @@ int exponential_search(int *array, size_t size, int value)
 			break;
 		}
 	}
-
 	printf("Value found between indexes [%d] and [%d]\n", min, step);
-
 	low = min;
 	high = step;
 
@@ -43,7 +41,6 @@ int exponential_search(int *array, size_t size, int value)
 	{
 		mid = low + (high - low) / 2;
 		print_array(array, low, high);
-
 		if (value == array[mid])
 			return (mid);
 
@@ -52,7 +49,6 @@ int exponential_search(int *array, size_t size, int value)
 		else
 			high = mid - 1;
 	}
-
 	return (-1);
 }
 
