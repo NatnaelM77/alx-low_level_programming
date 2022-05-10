@@ -79,6 +79,9 @@ int getValue(listint_t *, int);
 /* Change Head */
 listint_t *changeHead(listint_t *, int);
 
+/* Print List */
+listint_t *printList(listint_t *, int, int, size_t, int);
+
 /* Linear Skip */
 skiplist_t *linear_skip(skiplist_t *, int);
 
