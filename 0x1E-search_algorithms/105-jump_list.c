@@ -50,11 +50,13 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
  * @size: size of list
  * @value: value to search for
  *
+ * Return: return node
  */
 
 listint_t *printList(listint_t *list, int min, int max, size_t size, int value)
 {
 	int n;
+
 	while (min <= max && min < (int) size)
 	{
 		printf("Value checked array[%d] = [%d]\n", min, list->n);
@@ -69,10 +71,10 @@ listint_t *printList(listint_t *list, int min, int max, size_t size, int value)
 
 /**
  * getValue - return a value pointed by index
- * 
+ *
  * @list: a list
  * @index: index of elem
- * 
+ *
  * Return: value
  */
 
@@ -81,7 +83,7 @@ int getValue(listint_t *list, int index)
 	while (list)
 	{
 		if (list->index == index)
-			return list->n;
+			return (list->n);
 		list = list->next;
 	}
 
@@ -93,7 +95,7 @@ int getValue(listint_t *list, int index)
  *
  * @list: a list
  * @index: index of node
- * 
+ *
  * Return: node
  */
 
@@ -102,9 +104,10 @@ listint_t *changeHead(listint_t *list, int index)
 	while (list)
 	{
 		if (list->index == index)
-			return list;
+			return (list);
 		list = list->next;
 	}
 
 	return (NULL);
 }
+
