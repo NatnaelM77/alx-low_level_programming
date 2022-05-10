@@ -61,7 +61,7 @@ int exponential_search(int *array, size_t size, int value)
  *
  */
 
-void print_array(int *array, int min, int max)
+/* void print_array(int *array, int min, int max)
 {
 	printf("Searching in array: ");
 	for (; min < max; min++)
@@ -70,3 +70,4 @@ void print_array(int *array, int min, int max)
 	}
 	printf("%d\n", array[min]);
 }
+ */

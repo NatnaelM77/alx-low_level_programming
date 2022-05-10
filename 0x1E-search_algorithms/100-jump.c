@@ -35,7 +35,7 @@ int jump_search(int *array, size_t size, int value)
 			break;
 	}
 
-	for (i = 0; i <= min; i += 3)
+	for (i = 0; i <= min; i += jump)
 	{
 		printf("Value checked array[%d] = [%d]\n", i, array[i]);
 	}

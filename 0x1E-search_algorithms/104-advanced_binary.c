@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * advanced_binary - searches for a value in an array using 
+ * advanced_binary - searches for a value in an array using
  * advanced_binary search algorithm
  *
  * @array: is a pointer to the first element of the array
