@@ -4,7 +4,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stddef.h>
-
+#include <stdlib.h>
 
 /**
  * struct listint_s - singly linked list
@@ -63,6 +63,21 @@ int advanced_binary(int *, size_t, int);
 
 /* Jump List */
 listint_t *jump_list(listint_t *, size_t, int);
+
+/*Creae List */
+listint_t *create_list(int *, size_t);
+
+/*Free List */
+void free_list(listint_t *);
+
+/* Print List */
+void print_list(const listint_t *);
+
+/* Get Value */
+int getValue(listint_t *, int);
+
+/* Change Head */
+listint_t *changeHead(listint_t *, int);
 
 /* Linear Skip */
 skiplist_t *linear_skip(skiplist_t *, int);
