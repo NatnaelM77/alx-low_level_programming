@@ -14,16 +14,11 @@
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	int jump = sqrt(size);
+	int i, n, min = 0, max = jump;
 	listint_t *tmp;
-	int max = jump;
-	int min = 0;
-	int i, n;
 
 	if (!list || size <= 0)
-	{
 		return (NULL);
-	}
-
 	n = getValue(list, max);
 	while (n <= value && max < size)
 	{
@@ -38,29 +33,39 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			break;
 		}
 	}
-
 	for (i = jump; i <= max; i += jump)
-	{
 		printf("Value checked at index [%d] = [%d]\n", i, getValue(list, i));
-
-	}
-
 	printf("Value found between indexes [%d] and [%d]\n", min, max);
 
 	tmp = changeHead(list, min);
-	while (min <= max && min < size)
-	{
-		n = getValue(tmp, min);
-		printf("Value checked array[%d] = [%d]\n", min, tmp->n);
-		if (value == n)
-			return (tmp);
-		min += 1;
-		tmp = tmp->next;
-	}
-
-	return (NULL);
+	printList(tmp, min, max, size, value);
 }
 
+/**
+ * printList - print list
+ *
+ * @list: a list
+ * @min: min value
+ * @max: max value
+ * @size: size of list
+ * @value: value to search for
+ *
+ */
+
+listint_t *printList(listint_t *list, int min, int max, size_t size, int value)
+{
+	int n;
+	while (min <= max && min < (int) size)
+	{
+		printf("Value checked array[%d] = [%d]\n", min, list->n);
+		n = getValue(list, min);
+		if (value == n)
+			return (list);
+		min += 1;
+		list = list->next;
+	}
+	return (NULL);
+}
 
 /**
  * getValue - return a value pointed by index
@@ -83,10 +88,9 @@ int getValue(listint_t *list, int index)
 	return (-1);
 }
 
-
 /**
  * changeHead - return a node
- * 
+ *
  * @list: a list
  * @index: index of node
  * 
